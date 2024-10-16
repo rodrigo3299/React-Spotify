@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
 import Container from "./components/Container";
 import ConteudoPrincipal from "./components/ConteudoPrincipal";
+import artista from "../server/models/Artistas.js"
 
 function App() {
 
@@ -26,11 +27,13 @@ function App() {
           <>
           <h1>Rock</h1>
             {artistas
+              .filter(artista => artista.genero === "rap")
             .map(artista => (
               <div className="bg-red-500 w-28 h-28 flex flex-col justify-around items-center">
-                <h1>{artista.name}</h1>
+              <p>{artista.name}</p>
               </div>
-            ))}
+            ))
+            }
           </>
         </ConteudoPrincipal>
       </Container>
