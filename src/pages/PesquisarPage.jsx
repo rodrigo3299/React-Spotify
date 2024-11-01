@@ -11,7 +11,7 @@ export default function SearchPage() {
 
     useEffect(() => {
         setIsLoading(true);
-        fetch(`https://spotify-deploy-api.vercel.app/search/${search}`)
+        fetch(``)
             .then(response => {
                 if (!response.ok) {
                     throw new Error("Erro ao buscar resultados");

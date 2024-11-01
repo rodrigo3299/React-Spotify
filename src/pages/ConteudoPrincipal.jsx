@@ -9,7 +9,7 @@ export default function ConteudoPrincipal() {
   useEffect(() => {
     setIsLoading(true);
     setTimeout(() => {
-      fetch('https://spotify-deploy-api.vercel.app/artistas')
+      fetch('')
         .then(res => res.json())
         .then(data => {
           setArtistas(data);
